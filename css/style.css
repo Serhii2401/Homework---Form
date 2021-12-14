@@ -1,0 +1,131 @@
+body {
+    height: 100vh;
+    background-image: url(https://img.wallpapersafari.com/desktop/1366/768/30/35/6mQKaL.jpg) ;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+
+    
+}
+
+*{
+    box-sizing: border-box;
+    
+     
+}
+
+form {
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+form > div {
+    position: relative;
+    background: white;
+    border-bottom: 1px solid #ccc;
+}
+
+form > div > label {
+    opacity: 0.2;
+    font-weight: bold;
+    position: absolute;
+    top: 22px;
+    left: 20px;
+}
+
+form > div > input[type="text"],
+form > div > input[type="email"],
+form > div > input[type="password"] {
+    width: 100%;
+    border: 0;
+    padding: 20px 20px 20px 50px;
+    background: #eee;
+}
+
+form > div > input[type="text"]:focus,
+form > div > input[type="email"]:focus,
+form > div > input[type="password"]:focus {
+    outline: 0;
+    background: white;
+}
+
+form > div > input[type="text"]:focus  + label,
+form > div > input[type="email"]:focus + label,
+form > div > input[type="password"]:focus + label {
+    opacity: 0;
+}
+
+form > div > input[type="text"]:valid,
+form > div > input[type="email"]:valid,
+form > div > input[type="password"]:valid {
+    background: url(https://cdn.icon-icons.com/icons2/894/PNG/512/Tick_Mark_Dark_icon-icons.com_69147.png);
+    -webkit-background-size: 20px 20px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 20px 20px;
+}
+
+form > div > input[type="text"]:valid + label,
+form > div > input[type="email"]:valid + label,
+form > div > input[type="password"]:valid + label {
+    opacity: 0;
+}
+
+form > div > input[type="text"]:invalid:not(:focus):not(:placeholder-shown) ~ .requirements,
+form > div > input[type="email"]:invalid:not(:focus):not(:placeholder-shown) ~ .requirements,
+form > div > input[type="password"]:invalid:not(:focus):not(:placeholder-shown) ~ .requirements {
+    max-height: 200px;
+    padding: 0 30px 20px 50px;
+}
+
+form > div .requirements {
+    padding: 0 30px 0 50px;
+    color: #999;
+    max-height: 0;
+    transition: 0.5s;
+    overflow: hidden;
+    color: red;
+    font-size: sans-serif;
+}
+
+form input[type="submit"] {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    background: #41d873;
+    color: white;
+    border: 0;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 40px; 
+    border-radius: 100px;
+    transition: all .2s;
+    position: relative;
+}
+
+.btn:hover {
+    transform: translateY(15px);
+    transition: ease-in 0.3s;
+    z-index: 4;
+}
+
+.btn:hover::after {
+    transform: translateY(-15px);
+    transition: ease-out 0.2s;
+}
+
+.btn:active {
+    transform: translateY(20px);
+    transition: ease-out 0.1s;
+}
+
+
